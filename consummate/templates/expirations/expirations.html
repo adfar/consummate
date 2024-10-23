@@ -1,0 +1,26 @@
+{% extends "../base.html" %}
+
+{% block content %}
+    <h1>Expirations</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>UPC</th>
+                <th>Expiration Date</th>
+            </tr>
+        </thead>
+        <tbody hx-get="expirations">
+            {% for expiration in expirations %}
+                <tr class="{% if expiration.expiration_date <= today %}expired{% elif expiration.expiration_date <= cvp %}cvp{% endif %}">
+                    <td>{{ expiration.upc }}</td>
+                    <td>{{ expiration.expiration_date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Expiration</button>
+    </form>
+{% endblock %}

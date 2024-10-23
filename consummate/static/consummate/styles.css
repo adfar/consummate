@@ -1,5 +1,38 @@
 ul {
     list-style: none;
     display: flex;
-    color: thistle;
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.expired td{
+    background-color: palevioletred;
+}
+
+.cvp td {
+    background-color: gold;
+}
+
+a {
+    text-decoration: none;
+    color: #009879;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
 }
