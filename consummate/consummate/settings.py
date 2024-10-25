@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT =  '/opt/projects/consummate/consummate/static/consummate'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    '/opt/projects/consummate/consummate/static',
 ]
 
 
